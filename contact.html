@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Veesora Digital Marketing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Veesora</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a class="cta" href="contact.html">Let’s Work Together</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container contact-page">
+    <h1>Contact Us</h1>
+    <p>Get in touch — we'd love to hear about your project.</p>
+
+    <!--
+      To use a hosted form endpoint (Formspree, Netlify Forms, EmailJS or your own server),
+      replace DATA_FORM_ENDPOINT below with your endpoint URL.
+      Example Formspree action: https://formspree.io/f/your_form_id
+      If no endpoint is set, the form will fall back to opening the user's email client (mailto).
+    -->
+  <!-- Example endpoint using FormSubmit.co (replace with your preferred endpoint) -->
+  <form id="contact-form" class="contact-form" data-form-endpoint="https://formsubmit.co/hello@veesora.com">
+      <label for="name">Name</label>
+      <input id="name" name="name" required />
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button class="btn-primary" type="submit">Send Message</button>
+      <div id="form-status" aria-live="polite" style="margin-top:.5rem"></div>
+    </form>
+
+    <section class="contact-info">
+      <h2>Other ways to reach us</h2>
+      <p>Email: hello@veesora.com</p>
+      <p>Follow us on social media: Instagram / LinkedIn / Facebook</p>
+    </section>
+
+    <section class="payment-area" style="margin-top:1.5rem">
+      <h2>Pay for services</h2>
+      <p>If you'd like to accept payments, you can add a payment link (Stripe Payment Link, PayPal, or Shopify Buy Button). Replace the placeholder URL below with your payment link.</p>
+  <p><a id="pay-now" class="btn-primary" href="https://buy.stripe.com/test_XXXXXXXXXXXX" target="_blank" rel="noopener">Pay Now</a></p>
+    </section>
+
+    <section class="contact-info">
+      <h2>Other ways to reach us</h2>
+      <p>Email: hello@veesora.com</p>
+      <p>Follow us on social media: Instagram / LinkedIn / Facebook</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">© <span id="year">2025</span> Veesora Ltd</div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+# Veesora Digital Marketing — Starter Site
+
+This folder contains a small, responsive starter website for the Veesora Digital Marketing Team based on the provided project brief.
+
+Files:
+- `index.html` — Home / hero / services preview / testimonials
+- `about.html` — About, team and values
+- `services.html` — Detailed services
+- `portfolio.html` — Case studies / projects
+- `contact.html` — Contact form and contact info
+- `styles/style.css` — Main stylesheet
+- `scripts/main.js` — Small interactive bits (testimonial slider, year)
+
+To view locally:
+1. Open `index.html` in a browser (double click or right-click -> Open with...). For local testing with relative paths, use a simple static server.
+
+Example using Python (if installed):
+```powershell
+# from inside the `veesora-site` folder
+python -m http.server 8000; Start-Process "http://localhost:8000"
+```
+
+Notes and next steps:
+- Replace placeholder analytics snippet in `index.html` with your Google Analytics / GTM ID.
+- The contact form currently uses `mailto:` as a placeholder. For production, integrate a backend endpoint or use a service (Formspree, Netlify Forms, or a serverless function) to handle submissions and validation.
+- Consider adding images, case study pages, and SEO meta tags per page.
+- If you'd like, I can initialize a git repo here and make an initial commit — tell me and I'll do it.
+
+Contact form and payment setup
+--------------------------------
+
+1) Hosted form endpoint (recommended quick option)
+- Sign up for Formspree (https://formspree.io) or use Netlify Forms. Create a new form and copy the form endpoint URL.
+- Edit `contact.html` and set the `data-form-endpoint` attribute on the `#contact-form` element to your Formspree URL (e.g. `https://formspree.io/f/abcd1234`).
+- The JavaScript will POST JSON to that endpoint and show a status message.
+
+2) Mailto fallback
+- If no endpoint is set, the form will open the user's email client with the filled details.
+
+3) Payments
+- For simple payments you can use:
+	- Stripe Payment Links (create a payment link in your Stripe dashboard and paste the URL into `contact.html` where it says `REPLACE_WITH_PAYMENT_LINK`).
+	- PayPal 'Buy Now' or Smart Buttons (PayPal provides hosted links or embedded buttons).
+	- Shopify Buy Button for single products.
+
+Security and production notes
+- Do not include secret API keys in client-side JS. Use server-side functions for secure payment capture and to keep keys secret.
+- For higher reliability and spam protection, use server-side validation, CAPTCHA, and send transactional emails from your server or email provider (SendGrid, Mailgun).
+
