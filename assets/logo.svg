@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="60" viewBox="0 0 240 60" aria-hidden="true">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0a66ff"/>
+      <stop offset="1" stop-color="#00b4ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="60" rx="8" fill="url(#g)" />
+  <g transform="translate(18,10)" fill="#fff">
+    <text x="0" y="24" font-family="Poppins, sans-serif" font-weight="700" font-size="20">Veesora</text>
+    <text x="0" y="44" font-family="Lato, sans-serif" font-weight="400" font-size="12">Digital Marketing Team</text>
+  </g>
+</svg>
