@@ -24,15 +24,26 @@ Notes and next steps:
 - Replace placeholder analytics snippet in `index.html` with your Google Analytics / GTM ID.
 - The contact form currently uses `mailto:` as a placeholder. For production, integrate a backend endpoint or use a service (Formspree, Netlify Forms, or a serverless function) to handle submissions and validation.
 - Consider adding images, case study pages, and SEO meta tags per page.
-- If you'd like, I can initialize a git repo here and make an initial commit — tell me and I'll do it.
 
 Contact form and payment setup
---------------------------------
 
 1) Hosted form endpoint (recommended quick option)
-- Sign up for Formspree (https://formspree.io) or use Netlify Forms. Create a new form and copy the form endpoint URL.
-- Edit `contact.html` and set the `data-form-endpoint` attribute on the `#contact-form` element to your Formspree URL (e.g. `https://formspree.io/f/abcd1234`).
-- The JavaScript will POST JSON to that endpoint and show a status message.
+
+GitHub Pages deploy (workflow added)
+----------------------------------
+
+This repository includes a GitHub Actions workflow that will deploy the site to GitHub Pages when you push to `main`.
+
+Steps to publish:
+1. Create a GitHub repository (public or private).
+	 - Locally you can run (replace REPO_URL):
+		 ```powershell
+		 git remote add origin REPO_URL
+		 git push -u origin main
+		 ```
+2. In the repository settings -> Pages, ensure GitHub Pages is enabled (the Actions workflow will handle deployment). If Pages requires branch selection, select 'gh-pages' or follow the Actions guidance.
+
+If you want, I can prepare the `git remote add` and attempt to push from here — you'll be prompted for credentials on your machine.
 
 2) Mailto fallback
 - If no endpoint is set, the form will open the user's email client with the filled details.
