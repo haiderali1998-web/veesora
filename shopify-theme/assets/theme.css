@@ -1,0 +1,8 @@
+:root{--color-accent:#0a66ff;--bg:#ffffff;--text:#05204A}
+body{font-family: Lato, sans-serif;color:var(--text);background:var(--bg);margin:0}
+.wrap{max-width:1100px;margin:0 auto;padding:2rem}
+.site-header{background:linear-gradient(90deg,var(--color-accent),#00b4ff);color:#fff}
+.hero{padding:4rem 0;text-align:center}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.service{background:#fff;padding:1rem;border-radius:8px;border:1px solid #e6f0ff}
+.site-footer{padding:1rem;border-top:1px solid #eee;margin-top:2rem}

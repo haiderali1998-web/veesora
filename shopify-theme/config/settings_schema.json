@@ -1,0 +1,3 @@
+[
+  {"name":"Theme settings","settings":[{"type":"text","id":"shop_name","label":"Shop name","default":"Veesora"},{"type":"color","id":"accent","label":"Accent color","default":"#0a66ff"}]}
+]

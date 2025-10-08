@@ -1,0 +1,21 @@
+<section class="hero">
+  <div class="wrap">
+    <h1>{{ section.settings.headline }}</h1>
+    <p>{{ section.settings.subhead }}</p>
+    {% if section.settings.button_text != blank %}
+      <a class="btn" href="{{ section.settings.button_link }}">{{ section.settings.button_text }}</a>
+    {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {"type":"text","id":"headline","label":"Headline","default":"We will solve your marketing issues"},
+    {"type":"text","id":"subhead","label":"Subhead","default":"Veesora — digital marketing & growth"},
+    {"type":"text","id":"button_text","label":"Button text","default":"Let’s Work Together"},
+    {"type":"url","id":"button_link","label":"Button link","default":"/pages/contact"}
+  ]
+}
+{% endschema %}
